@@ -10,14 +10,26 @@
             _nextId = 1;
             _records = new List<Records>()
             {
-                new Records() {id = _nextId++, title = "Wish you were here", artist = "Pink Floyd", duration = 50, publicationYear = 1997 }
+                new Records() {id = _nextId++, title = "Wish you were here", artist = "Pink Floyd", duration = 50, publicationYear = 1977 }
             };
         }
 
-        public List<Records> GetRecords()
+        public List<Records> Get()
         {
             return new List<Records>(_records);
         }
+
+        //public Records? GetById(int id)
+        //{
+        //    return _records.Find(r => r.id == id);
+        //}
+
+        //public Records Add(Records record)
+        //{
+        //    record.id = _nextId++;
+        //    _records.Add(record);
+        //    return record;
+        //}
     }
 }
 
