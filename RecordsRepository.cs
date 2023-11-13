@@ -10,7 +10,9 @@
             _nextId = 1;
             _records = new List<Records>()
             {
-                new Records() {id = _nextId++, title = "Wish you were here", artist = "Pink Floyd", duration = 50, publicationYear = 1977 }
+                new Records() {id = _nextId++, title = "Wish you were here", artist = "Pink Floyd", duration = 50, publicationYear = 1977 },
+                new Records() {id = _nextId++, title = "The Wall", artist = "Pink Floyd", duration = 80, publicationYear = 1979 },
+                new Records() {id = _nextId++, title = "The Dark Side of the Moon", artist = "Pink Floyd", duration = 42, publicationYear = 1973 }
             };
         }
 
