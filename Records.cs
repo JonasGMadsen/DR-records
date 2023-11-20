@@ -33,7 +33,7 @@
         {
             if (duration <= 0)
             {
-                throw new ArgumentOutOfRangeException("Duration must be greater than 0");
+                throw new Exception("Duration must be greater than 0");
             }
         }
 
@@ -41,7 +41,7 @@
         {
             if (publicationYear <= 1800)
             {
-                throw new ArgumentOutOfRangeException("Publication year must be greater than 1800");
+                throw new Exception("Publication year must be greater than 1800");
             }
         }
 
