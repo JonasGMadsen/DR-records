@@ -21,17 +21,17 @@
             return new List<Records>(_records);
         }
 
-        //public Records? GetById(int id)
-        //{
-        //    return _records.Find(r => r.id == id);
-        //}
+        public Records? GetById(int id)
+        {
+            return _records.Find(r => r.id == id);
+        }
 
-        //public Records Add(Records record)
-        //{
-        //    record.id = _nextId++;
-        //    _records.Add(record);
-        //    return record;
-        //}
+        public Records Add(Records record)
+        {
+            record.id = _nextId++;
+            _records.Add(record);
+            return record;
+        }
     }
 }
 

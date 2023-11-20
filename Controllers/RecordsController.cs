@@ -34,10 +34,24 @@ namespace DR_records.Controllers
         }
 
         // POST api/<RecordsController>
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Records> Post([FromBody] Records newRecord)
         {
-
+            try
+            {
+                Records addedRecord = _recordsRepository.Add(newRecord);
+                return Created("/" + addedRecord.id, addedRecord);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<RecordsController>/5
