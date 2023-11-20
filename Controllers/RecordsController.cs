@@ -18,7 +18,9 @@ namespace DR_records.Controllers
         }
 
         // GET: api/<RecordsController>
-       [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [HttpGet]
         public IEnumerable<Records> Get()
         {
             return _recordsRepository.Get();
